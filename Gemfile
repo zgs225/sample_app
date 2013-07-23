@@ -37,3 +37,5 @@ group :production do
 end
 
 gem 'therubyracer'
+
+gem 'haml-rails'
