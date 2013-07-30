@@ -32,8 +32,8 @@ def sign_in(user, options={})
 end
 
 def fill_in_valid_information
-  fill_in "Name",         with: "Example User"
-  fill_in "Email",        with: "user@example.com"
-  fill_in "Password",     with: "foobar"
-  fill_in "Confirmation", with: "foobar"
+  fill_in "Name",             with: "Example User"
+  fill_in "Email",            with: "user@example.com"
+  fill_in "Password",         with: "foobar"
+  fill_in "Confirm Password", with: "foobar"
 end

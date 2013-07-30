@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :signed_in_user, only: [:index, :edit, :update]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: [:destroy]
+  before_action :should_not_sign_up, only: [:new, :create]
 
   def index
     @users = User.paginate(page: params[:page])
@@ -51,7 +52,7 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+                                   :password_confirmation, :admin)
     end
 
     def signed_in_user
@@ -68,5 +69,9 @@ class UsersController < ApplicationController
 
     def admin_user
       redirect_to(root_path) unless current_user.admin?
+    end
+
+    def should_not_sign_up
+      redirect_to(root_path) if signed_in?
     end
 end
