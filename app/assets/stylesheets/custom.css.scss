@@ -158,6 +158,30 @@ aside {
   @include box_sizing;
 }
 
+.stats {
+  overflow: auto;
+
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $grayLighter;
+    color: gray;
+
+    &:first-child {
+      paddin-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+
+  strong {
+    display: block;
+  }
+}
+
 /* forms */
 
 input, textarea, select, .unedittable-input {
