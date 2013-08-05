@@ -1,13 +1,9 @@
-Ruby On Rails tutorials
+Ruby On Rails tutorial
 =======================
 
 > This is the sample application for
 > the [*Ruby on Rails Tutorial*](http://railstutorial.org/)
 > by [Michael Hartl](http://michaelhartl.com/).
-
----------------------------------------------------------------
-
-#Ruby on Rails Tutorial 总结
 
 ## Test Driven Develepment
 在测试驱动开发中，我们要写一个失败的测试。然后编写代码让测试通过，显示为绿色。最后如果需要的话，
